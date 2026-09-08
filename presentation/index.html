@@ -1,13 +1,86 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title>I.V.A.N</title>
+        <title>I.V.A.N.</title>
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1 class="main-title center">I.V.A.N.</h1>
+        <h1 class="main-title center roboto">I.V.A.N.</h1>
+        <h4 class="second-title center roboto">Intelligent Voice Activated Node</h4>
+        <h3 class="contributors roboto center">Made by ILAB2011 and DuckWithACrowbar</h3>
+        <hr></hr>
     </body>
 </html>
+<style> 
+html{
+    background-color: black;
+
+    animation-name: main-fade-in;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+.center{
+    text-align: center;
+    align-items: center;
+}
+
+.roboto{
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+.second-title{
+    margin-top: -15px;
+    opacity: 0;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+    animation-duration: 0.3s;
+
+}
+
+.contributors{
+    opacity: 0;
+    padding-top: 10px;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4.2s;
+    animation-duration: 0.3s;
+}
+
+hr{
+    border: 1px solid black;
+    /* ik this border for hr is stupid but i couldnt think of anything else*/
+    opacity: 0;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4.4s;
+    animation-duration: 0.3s;
+
+}
+
+
+/* Add any and all keyframes functions after this comment */
+
+@keyframes main-fade-in {
+    0%{background-color: black;}
+    100%{background-color: white;}
+}
+
+@keyframes alt-fade-in {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+</style>
