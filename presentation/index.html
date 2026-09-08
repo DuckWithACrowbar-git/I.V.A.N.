@@ -2,16 +2,17 @@
 <html lang="en">
     <head>
         <title>I.V.A.N.</title>
-        <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body onload="init()">
         <h1 class="main-title center roboto">I.V.A.N.</h1>
         <h4 class="second-title center roboto">Intelligent Voice Activated Node</h4>
         <h3 class="contributors roboto center">Made by ILAB2011 and DuckWithACrowbar</h3>
         <hr></hr>
+        <p class="p1 roboto center">I'm pretty sure you've heard of the Raspberry Pi, right?</p>
+        <img class="rpi-img center" src="https://cdn-shop.adafruit.com/970x728/1914-05.jpg"></img>
     </body>
 </html>
 <style> 
@@ -28,6 +29,7 @@ html{
 .center{
     text-align: center;
     align-items: center;
+    align-self: center;   
 }
 
 .roboto{
@@ -71,16 +73,43 @@ hr{
 
 }
 
+.p1{
+    opacity: 0;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4.6s;
+    animation-duration: 0.3s;
+}
+
+.center + .rpi-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: auto;
+}
+
+.rpi-img{
+    /* width: 200px; */
+    opacity: 0;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4.8s;
+    animation-duration: 0.3s;
+}
 
 /* Add any and all keyframes functions after this comment */
 
 @keyframes main-fade-in {
     0%{background-color: black;}
-    100%{background-color: white;}
+    100%{background-color: #FCFAF6;}
 }
 
 @keyframes alt-fade-in {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+    0% {opacity: 0; transform: scale(1);}
+    50% {opacity: 0.5; transform: scale(1.01);}
+    100% {opacity: 1; transform: scale(1);}
 }
 </style>
