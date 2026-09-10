@@ -1,18 +1,23 @@
 <!DOCTYPE HTML>
 <html lang="en">
     <head>
-        <title>I.V.A.N.</title>
+        <title>I.V.A.N. - Page 1</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     </head>
-    <body onload="init()">
+    <body>
         <h1 class="main-title center roboto">I.V.A.N.</h1>
         <h4 class="second-title center roboto">Intelligent Voice Activated Node</h4>
         <h3 class="contributors roboto center">Made by ILAB2011 and DuckWithACrowbar</h3>
-        <hr></hr>
+        <hr class="hr1"></hr>
         <p class="p1 roboto center">I'm pretty sure you've heard of the Raspberry Pi, right?</p>
         <img class="rpi-img center" src="https://cdn-shop.adafruit.com/970x728/1914-05.jpg"></img>
+        <p class="p2 roboto center">It's a small computer that can be used in a lot of different project.</p>
+        <div class="center"><button id="playBtn" class="roboto">Play Video</button></div>
+        <div class="center"><video id="demoVid"><source class="center" src="assets/demo-vid.mp4" type="video/mp4">[This browser doesn't seem to support video playback :(]</video></div>
+        <hr class="hr2"></hr>
+        <div class="center nextPageBtn"><button class="roboto"><a href="index2.html">Go to next page</a></button></div>
     </body>
 </html>
 <style> 
@@ -61,16 +66,15 @@ html{
     animation-duration: 0.3s;
 }
 
-hr{
+.hr1{
     border: 1px solid black;
-    /* ik this border for hr is stupid but i couldnt think of anything else*/
-    opacity: 0;
-    animation-name: alt-fade-in;
+    /* ^^^ ik this border for hr is stupid but i couldnt think of anything else*/
+    transform: scaleX(0);
+    animation-name: hr-slide;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
     animation-delay: 4.4s;
-    animation-duration: 0.3s;
-
+    animation-duration: 0.7s;
 }
 
 .p1{
@@ -78,7 +82,7 @@ hr{
     animation-name: alt-fade-in;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    animation-delay: 4.6s;
+    animation-delay: 5.6s;
     animation-duration: 0.3s;
 }
 
@@ -96,9 +100,65 @@ hr{
     animation-name: alt-fade-in;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    animation-delay: 4.8s;
+    animation-delay: 5.8s;
     animation-duration: 0.3s;
 }
+
+.p2{
+    opacity: 0;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+    animation-duration: 0.3s;
+}
+
+#playBtn{
+    margin-bottom: 20px;
+    opacity: 0;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 6.4s;
+    animation-duration: 0.3s;
+}
+
+video{
+    width: 400px;
+    height: auto;
+    opacity: 0;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 6.4s;
+    animation-duration: 0.3s;
+}
+
+.hr2{
+    border: 1px solid black;
+    transform: scaleX(0);
+    animation-name: hr-slide;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 6.8s;
+    animation-duration: 0.7s;
+}
+
+a{
+    color: black;
+    text-decoration: none; 
+}
+
+
+.nextPageBtn{
+    opacity: 0;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
+    animation-duration: 1s;
+}
+
 
 /* Add any and all keyframes functions after this comment */
 
@@ -112,4 +172,20 @@ hr{
     50% {opacity: 0.5; transform: scale(1.01);}
     100% {opacity: 1; transform: scale(1);}
 }
+
+@keyframes hr-slide {
+    to {transform: scaleX(1);}
+}
+
 </style>
+<script>
+    /* Move to top of webpage */
+    window.scrollTo(0, 0);
+
+    /* Button player thingy */
+    const video = document.getElementById('demoVid');
+    const button = document.getElementById('playBtn');
+    button.addEventListener('click', function() {
+        video.play();
+    });
+</script>
