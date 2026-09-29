@@ -11,13 +11,14 @@
         <h4 class="second-title center roboto">Intelligent Voice Activated Node</h4>
         <h3 class="contributors roboto center">Made by ILAB2011 and DuckWithACrowbar</h3>
         <hr class="hr1"></hr>
-        <p class="p1 roboto center">I'm pretty sure you've heard of the Raspberry Pi, right?</p>
-        <img class="rpi-img center" src="assets/rpi.jpg"></img>
-        <p class="p2 roboto center">It's a small computer that can be used in a lot of different project.</p>
+        <p class="p1 roboto center">A robotic arm controller via voice commands or controller.</p>
+        <!-- <img class="rpi-img center" src="assets/rpi.jpg"></img> -->
+        <p class="p2 roboto center">One Raspberry Pi handles controlling the arm, and the other handles interpreting the voice commands and controller inputs.</p>
         <div class="center"><button id="playBtn" class="roboto">Play Video</button></div>
         <div class="center"><video id="demoVid"><source class="center" src="assets/demo-vid.mp4" type="video/mp4">[This browser doesn't seem to support video playback :(]</video></div>
+        <div class="center github-link"><a class="roboto" href="https://github.com/DuckWithACrowbar-git/I.V.A.N." target="_blank">Our GitHub project page</a></div>
         <hr class="hr2"></hr>
-        <div class="center nextPageBtn"><button class="roboto"><a href="index2.html">Go to next page</a></button></div>
+        <div class="center nextPageBtn"><button class="roboto"><a href="index2.html">Go to next page (Parts list)</a></button></div>
     </body>
 </html>
 <style> 
@@ -105,6 +106,7 @@ html{
 }
 
 .p2{
+    font-size: 101%;
     opacity: 0;
     animation-name: alt-fade-in;
     animation-timing-function: ease-out;
@@ -149,13 +151,25 @@ a{
     text-decoration: none; 
 }
 
-
-.nextPageBtn{
+.github-link{
     opacity: 0;
     animation-name: alt-fade-in;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    animation-delay: 8s;
+    animation-delay: 7.2s;
+    animation-duration: 1s;
+    color: grey;
+    text-decoration: underline;
+}
+
+
+.nextPageBtn{
+    padding-top: 20px;
+    opacity: 0;
+    animation-name: alt-fade-in;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 8.2s;
     animation-duration: 1s;
 }
 
