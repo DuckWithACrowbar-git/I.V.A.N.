@@ -16,9 +16,11 @@
         <p class="p2 roboto center">One Raspberry Pi handles controlling the arm, and the other handles interpreting the voice commands and controller inputs.</p>
         <div class="center"><button id="playBtn" class="roboto">Play Video</button></div>
         <div class="center"><video id="demoVid"><source class="center" src="assets/demo-vid.mp4" type="video/mp4">[This browser doesn't seem to support video playback :(]</video></div>
-        <div class="center github-link"><a class="roboto" href="https://github.com/DuckWithACrowbar-git/I.V.A.N." target="_blank">Our GitHub project page</a></div>
         <hr class="hr2"></hr>
-        <div class="center nextPageBtn"><button class="roboto"><a href="index2.html">Go to next page (Parts list)</a></button></div>
+        <div class="inline center">
+            <div class="github-link"><button><a class="roboto" href="https://github.com/DuckWithACrowbar-git/I.V.A.N." target="_blank">Our GitHub project page</a></button></div>
+            <div class="nextPageBtn"><button class="roboto"><a href="index2.html">Go to next page (Parts list)</a></button></div>
+        </div>
     </body>
 </html>
 <style> 
@@ -149,6 +151,11 @@ video{
 a{
     color: black;
     text-decoration: none; 
+}
+
+.inline{
+    width: 50%;
+    display: inline-block;
 }
 
 .github-link{
